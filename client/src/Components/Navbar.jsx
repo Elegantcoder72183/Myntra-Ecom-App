@@ -104,7 +104,7 @@ const Navbar = () => {
         <div className="hidden sm:block ">
           <input
             type="text"
-            className="h-9 w-96 bg-gray-100 ml-4 sm:ml-16 mt-2 sm:mt-5 text-xs rounded px-3"
+            className="h-9 w-96 bg-gray-100 ml-16 mt-5 text-xs rounded px-3"
             placeholder="Search for products, brands and more"
           />
         </div>

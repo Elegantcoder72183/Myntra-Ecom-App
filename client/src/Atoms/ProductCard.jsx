@@ -7,7 +7,6 @@
     const dispatch = useDispatch();
 
     const handleAddToWishlist = (product) => {
-        console.log("Adding to wishlist:", product);
         dispatch(addToWishlist(product));
         toast.success('Product added to wislist')  
     };

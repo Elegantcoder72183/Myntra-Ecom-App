@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import g1 from "../Assets/googleplay.png";
 import g2 from "../Assets/appleplay.png";
 import g3 from "../Assets/original.png";
@@ -6,13 +7,31 @@ import { AiFillFacebook, AiFillYoutube } from "react-icons/ai";
 import { ImTwitter, ImInstagram } from "react-icons/im";
 
 const Footer = () => {
+  const [isMObileView, setIsMobileView] = useState(false);
+
+  useEffect (() => {
+    const checkMobileView = () => {
+      const screenWidth = window.innerWidth;
+      setIsMobileView(screenWidth <= 768);
+    }
+      window.addEventListener("resize", checkMobileView);
+      checkMobileView();
+
+      return () => {
+        window.removeEventListener('resize',checkMobileView)
+      
+        
+    }
+  }, [] )
+
   return (
     <div>
-      { (
+      {!isMObileView &&(
+       
         <div>
           <div className="w-10/12 mx-auto grid grid-cols-12 mt-12 font1">
-            <div className="col-span-2">
-              <h1 className=" text-sm font-semibold ">ONLINE SHOPPING</h1>
+            <div className="col-span-2 ">
+              <h1 className="text-sm font-semibold ">ONLINE SHOPPING</h1>
               <ul className=" text-sm text-slate-500 pt-6">
                 <li>Men</li>
                 <li>Women</li>

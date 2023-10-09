@@ -25,7 +25,7 @@ const Dashboard = () => {
       </div>
 
       <div className="flex justify-center">
-        <UserMenu />
+        {/* <UserMenu /> */}
       </div>
     </div>
   );
