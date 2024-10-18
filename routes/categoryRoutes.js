@@ -11,7 +11,6 @@ const router = express.Router();
 router.post(
   "/create-category",
   requireSignIn,
-
   createCategoryController
 );
 
